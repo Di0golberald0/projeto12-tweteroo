@@ -35,4 +35,11 @@ app.get("/tweets", (req, res) => {
     res.send(displayTweets);
 });
 
+app.get("/tweets/:username", (req, res) => {
+    const { username } = req.params;
+    const userTweets = tweets.filter((tweet) => tweet.username === username);
+    res.send(userTweets);
+
+});
+
 app.listen(5000, () => console.log("listening on port 5000"));
