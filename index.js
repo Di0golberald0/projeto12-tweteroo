@@ -16,7 +16,7 @@ app.post("/sign-up", (req, res) => {
         return;
     };
     users.push({ username, avatar });
-    res.send("OK");
+    res.status(201).send("OK");
 });
 
 app.post("/tweets", (req, res) => {
@@ -27,7 +27,7 @@ app.post("/tweets", (req, res) => {
     };
     const { avatar } = users.find((user) => user.username === username);
     tweets.push({ username, avatar, tweet });
-    res.send("OK");
+    res.status(201).send("OK");
 });
 
 app.get("/tweets", (req, res) => {
