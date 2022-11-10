@@ -5,7 +5,8 @@
   "description": "Projeto 11, Tweteroo, back-end",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon index.js"
   },
   "keywords": [],
   "author": "Diogo Beraldo",
